@@ -85,7 +85,7 @@ section {
 /* Shining H1 with Hover Effect */
 h1 {
   font-size: 2.5em;
-  color: #333; /* Dark color for the text */
+  color: #333;
   text-align: center;
   margin-bottom: 20px;
   position: relative;
@@ -125,12 +125,8 @@ h1:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    45deg,
-    #ff9900,
-    #ffcc00
-  ); /* Adjust gradient colors */
-  opacity: 0.3; /* Adjust opacity for the glitter effect */
+  background: linear-gradient(45deg, #ff9900, #ffcc00);
+  opacity: 0.3;
   z-index: -1;
   top: 0;
   left: 0;
@@ -147,10 +143,9 @@ h1:hover {
   }
 }
 
-/* Existing CSS - No changes */
 #about {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background: linear-gradient(75deg, #e6e6fa, #ffb6c1);
 }
@@ -203,6 +198,48 @@ h1:hover {
 
 .circle .content {
   opacity: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .circle {
+    width: 300px; /* Adjusted width for smaller screens */
+    height: 300px; /* Adjusted height for smaller screens */
+    margin-top: 5%; /* Adjusted margin for smaller screens */
+  }
+
+  .circle img {
+    width: 70%;
+    height: 80%;
+  }
+  .circle:hover {
+    width: 450px;
+    height: 850px;
+    border-radius: 10px;
+    transition: 0.75s;
+  }
+
+  .circle:hover img {
+    width: 80%;
+    height: 40%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.75s;
+  }
+  .circle:hover .content {
+    position: absolute;
+    top: 45%; /* Reset top position */
+    bottom: 10%;
+    right: 6%;
+    color: white;
+    width: 90%;
+    opacity: 1;
+    transition: 0.75s;
+  }
+  .circle .content {
+    opacity: 0;
+  }
 }
 
 /* SKILL SECTION */
